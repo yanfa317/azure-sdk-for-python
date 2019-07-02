@@ -9,10 +9,20 @@
 # regenerated.
 # --------------------------------------------------------------------------
 
-from .cdn_management_client import CdnManagementClient
-from .version import VERSION
+from msrest.serialization import Model
 
-__all__ = ['CdnManagementClient']
 
-__version__ = VERSION
+class CdnEndpoint(Model):
+    """Defines the ARM Resource ID for the linked endpoints.
 
+    :param id: ARM Resource ID string.
+    :type id: str
+    """
+
+    _attribute_map = {
+        'id': {'key': 'id', 'type': 'str'},
+    }
+
+    def __init__(self, *, id: str=None, **kwargs) -> None:
+        super(CdnEndpoint, self).__init__(**kwargs)
+        self.id = id

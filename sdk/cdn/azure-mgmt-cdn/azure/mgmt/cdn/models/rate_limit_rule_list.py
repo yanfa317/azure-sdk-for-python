@@ -9,10 +9,20 @@
 # regenerated.
 # --------------------------------------------------------------------------
 
-from .cdn_management_client import CdnManagementClient
-from .version import VERSION
+from msrest.serialization import Model
 
-__all__ = ['CdnManagementClient']
 
-__version__ = VERSION
+class RateLimitRuleList(Model):
+    """Defines contents of rate limit rules.
 
+    :param rules: List of rules
+    :type rules: list[~azure.mgmt.cdn.models.RateLimitRule]
+    """
+
+    _attribute_map = {
+        'rules': {'key': 'rules', 'type': '[RateLimitRule]'},
+    }
+
+    def __init__(self, **kwargs):
+        super(RateLimitRuleList, self).__init__(**kwargs)
+        self.rules = kwargs.get('rules', None)

@@ -9,10 +9,20 @@
 # regenerated.
 # --------------------------------------------------------------------------
 
-from .cdn_management_client import CdnManagementClient
-from .version import VERSION
+from msrest.serialization import Model
 
-__all__ = ['CdnManagementClient']
 
-__version__ = VERSION
+class CustomRuleList(Model):
+    """Defines contents of custom rules.
 
+    :param rules: List of rules
+    :type rules: list[~azure.mgmt.cdn.models.CustomRule]
+    """
+
+    _attribute_map = {
+        'rules': {'key': 'rules', 'type': '[CustomRule]'},
+    }
+
+    def __init__(self, **kwargs):
+        super(CustomRuleList, self).__init__(**kwargs)
+        self.rules = kwargs.get('rules', None)

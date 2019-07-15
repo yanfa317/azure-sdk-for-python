@@ -12,6 +12,19 @@
 from msrest.paging import Paged
 
 
+class OperationPaged(Paged):
+    """
+    A paging container for iterating over a list of :class:`Operation <azure.mgmt.alertsmanagement.models.Operation>` object
+    """
+
+    _attribute_map = {
+        'next_link': {'key': 'nextLink', 'type': 'str'},
+        'current_page': {'key': 'value', 'type': '[Operation]'}
+    }
+
+    def __init__(self, *args, **kwargs):
+
+        super(OperationPaged, self).__init__(*args, **kwargs)
 class AlertPaged(Paged):
     """
     A paging container for iterating over a list of :class:`Alert <azure.mgmt.alertsmanagement.models.Alert>` object
@@ -25,3 +38,16 @@ class AlertPaged(Paged):
     def __init__(self, *args, **kwargs):
 
         super(AlertPaged, self).__init__(*args, **kwargs)
+class AlertRulePaged(Paged):
+    """
+    A paging container for iterating over a list of :class:`AlertRule <azure.mgmt.alertsmanagement.models.AlertRule>` object
+    """
+
+    _attribute_map = {
+        'next_link': {'key': 'nextLink', 'type': 'str'},
+        'current_page': {'key': 'value', 'type': '[AlertRule]'}
+    }
+
+    def __init__(self, *args, **kwargs):
+
+        super(AlertRulePaged, self).__init__(*args, **kwargs)

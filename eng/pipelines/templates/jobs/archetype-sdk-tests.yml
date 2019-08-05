@@ -1,7 +1,7 @@
 parameters:
   ServiceDirectory: ''
   EnvVars: {}
-  MaxParallel: 0
+  MaxParallel: 1
   BeforeTestSteps: []
   BuildTargetingString: 'azure-*'
   Matrix:

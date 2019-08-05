@@ -27,7 +27,7 @@ jobs:
     strategy:
       maxParallel: ${{ parameters.MaxParallel }}
       matrix: ${{ parameters.Matrix }}
-    continueOnError: false
+    continueOnError: true
 
     pool:
       vmImage: $(OSVmImage)

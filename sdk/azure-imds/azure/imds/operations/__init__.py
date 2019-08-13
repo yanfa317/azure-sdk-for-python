@@ -9,11 +9,12 @@
 # regenerated.
 # --------------------------------------------------------------------------
 
-from ._configuration import ServiceBusManagementClientConfiguration
-from ._service_bus_management_client import ServiceBusManagementClient
-__all__ = ['ServiceBusManagementClient', 'ServiceBusManagementClientConfiguration']
+from ._instances_operations import InstancesOperations
+from ._attested_operations import AttestedOperations
+from ._identity_operations import IdentityOperations
 
-from .version import VERSION
-
-__version__ = VERSION
-
+__all__ = [
+    'InstancesOperations',
+    'AttestedOperations',
+    'IdentityOperations',
+]

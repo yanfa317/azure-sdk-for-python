@@ -9,9 +9,9 @@
 # regenerated.
 # --------------------------------------------------------------------------
 
-from ._configuration import ServiceBusManagementClientConfiguration
-from ._service_bus_management_client import ServiceBusManagementClient
-__all__ = ['ServiceBusManagementClient', 'ServiceBusManagementClientConfiguration']
+from ._configuration import InstanceMetadataClientConfiguration
+from ._instance_metadata_client import InstanceMetadataClient
+__all__ = ['InstanceMetadataClient', 'InstanceMetadataClientConfiguration']
 
 from .version import VERSION
 

@@ -7,7 +7,7 @@ trigger:
     - master
   paths:
     include:
-    - sdk/storage/
+    - sdk/advisor/
 
 pr:
   branches:
@@ -19,9 +19,16 @@ pr:
     - restapi*
   paths:
     include:
-    - sdk/storage/
+    - sdk/advisor/
 
 jobs:
-- template: ../../eng/pipelines/templates/jobs/archetype-sdk-client.yml
+- template: ../../eng/pipelines/templates/stages/archetype-sdk-client.yml
   parameters:
-    ServiceDirectory: storage
+    ServiceDirectory: advisor
+    Artifacts:
+    - name: azure-storage-blob
+      safeName: azurestorageblob
+    - name: azure-storage-file
+      safeName: azurestoragefile
+    - name: azure-storage-queue
+      safeName: azurestoragequeue

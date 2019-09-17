@@ -8,7 +8,7 @@ import hashlib
 import base64
 import hmac
 from azure.core.pipeline.policies import HTTPPolicy
-from .utils import get_current_utc_time
+from ._utils import get_current_utc_time
 
 
 

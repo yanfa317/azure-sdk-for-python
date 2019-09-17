@@ -15,7 +15,7 @@ from azure.core.exceptions import (
     ResourceModifiedError,
     ResourceNotFoundError,
 )
-from ..utils import (
+from .._utils import (
     get_endpoint_from_connection_string,
     escape_and_tostr,
     prep_update_configuration_setting,
@@ -26,7 +26,7 @@ from .._generated.aio._configuration_async import AzureAppConfigurationConfigura
 from ..azure_appconfiguration_requests import AppConfigRequestsCredentialsPolicy
 from ..azure_appconfiguration_credential import AppConfigConnectionStringCredential
 from .._generated.models import KeyValue
-from ..models import ConfigurationSetting
+from .._models import ConfigurationSetting
 from .._user_agent import USER_AGENT
 
 

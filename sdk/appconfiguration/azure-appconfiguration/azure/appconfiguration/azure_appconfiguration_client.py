@@ -17,10 +17,10 @@ from azure.core.exceptions import (
 from ._generated.models import KeyValue
 from ._generated import AzureAppConfiguration
 from ._generated._configuration import AzureAppConfigurationConfiguration
-from .models import ConfigurationSetting
+from ._models import ConfigurationSetting
 from .azure_appconfiguration_requests import AppConfigRequestsCredentialsPolicy
 from .azure_appconfiguration_credential import AppConfigConnectionStringCredential
-from .utils import (
+from ._utils import (
     get_endpoint_from_connection_string,
     escape_and_tostr,
     prep_update_configuration_setting,
